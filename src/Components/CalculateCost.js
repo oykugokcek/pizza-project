@@ -5,7 +5,7 @@ const CalculateCost = ({data, cost, setCost}) => {
 
     useEffect(() => {
         calculatingCost();
-    }, [data])
+    })
 
     function calculatingCost() {
         let sizeCost=8;
