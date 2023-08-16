@@ -32,7 +32,7 @@ const [cost, setCost] = useState(0);
         <Route path="/form">
           
           <MockupPizza cost={cost}/>
-          <PizzaForm data={data} setData={setData}/>
+          <PizzaForm data={data} cost={cost} setData={setData}/>
           <CalculateCost data={data} cost={cost} setCost={setCost}/>
         
         </Route>

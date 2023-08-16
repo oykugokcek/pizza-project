@@ -1,10 +1,12 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
-function PizzaForm({data,setData}) {
+function PizzaForm({data,setData, cost}) {
    
 
 
@@ -22,13 +24,35 @@ function PizzaForm({data,setData}) {
         setData(newOrder)
         console.log("data", data);
         reset();
+        toast.success(`Your pizza is being prepared. Total amount: ${cost} $`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+        
       };
 
 
   return (
     <div className='max-w-3xl mx-auto pb-8'>
         <form onSubmit={handleSubmit(saveData)}>
-       
+        <ToastContainer 
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss={false}
+draggable={false}
+pauseOnHover={false}
+theme="colored"
+/>
         <div className='flex flex-col items-center gap-8 md:flex-row md:justify-center md:gap-72 pb-4'>
             <div>
                 <label className="block font-semibold py-4" htmlFor='size'>Select the size</label>

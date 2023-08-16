@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const MockupPizza = ({cost}) => {
   return (
     <div className='max-w-4xl mx-auto my-10'>
@@ -12,7 +13,8 @@ const MockupPizza = ({cost}) => {
                 During this time, the poorer citizens of this seaside city frequently purchased food that was cheap and could be eaten quickly. 
                 Luckily for them, Neapolitan pizza was affordable and readily available through numerous street vendors. </p>
                 <p className='text-sm pt-2 text-[#861411] font-semibold'>Luckily for you, three extra toppings free! </p>
-            <p className="text-4xl pt-3">{cost}$ </p>
+            <p className="text-4xl pt-3">8 $ </p>
+            
         </div>
       
     </div>
